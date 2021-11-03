@@ -3,8 +3,12 @@ html, body {
     margin: 0;
 }
 
-a {
+a, ul, li {
     text-decoration: none;
+}
+
+a:visited, a:link {
+    color: #0066CC;
 }
 
 header {
@@ -65,5 +69,15 @@ footer {
 }
 
 #summary {
+    border: solid 2px skyblue;
+    border-radius: 5px;
+    padding: 0.5em 1em 0.5em 2.3em;
+    position: relative;
+    text-align: center;
+}
 
+#summary li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+    list-style-type: none;
 }

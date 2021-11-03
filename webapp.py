@@ -16,11 +16,11 @@ def mycv():
     return render_template("cv.html", title="My CV")
 
 @webapp.get("/technologies")
-def mycv():
+def technologies():
     return render_template("technologies.html", title="Computing technologies")
 
 @webapp.get("/interests")
-def mycv():
+def interests():
     return render_template("interests.html", title="Personal interests")
 
 
