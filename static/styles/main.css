@@ -73,7 +73,7 @@ footer {
     border-radius: 5px;
     padding: 0.5em 1em 0.5em 2.3em;
     position: relative;
-    text-align: center;
+    text-align: center;;
 }
 
 #summary li {
@@ -100,3 +100,6 @@ footer {
     width: 300px;
 }
 
+#me {
+    font-size: 21px;
+}
