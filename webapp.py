@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 webapp = Flask(__name__)
 numTechnologies = 0
@@ -34,6 +34,17 @@ def technologies(index):
 def interests():
     return render_template("interests.html", title="Personal interests")
 
+@webapp.get("/comments")
+def comments():
+    return render_template("comments.html", title="Comments")
+
+@webapp.post("/submitted")
+def submitted():
+    email = request.form["email"]
+    comment = request.form["comment"]
+    with open("./static/resources/comments.txt", "a") as sf:
+        print(f"{email}\n{comment}\n", file=sf)
+    return render_template("success.html", title="Comment submitted")
 
 '''def previousTechnology():
     return
