@@ -1,7 +1,8 @@
+import os
 from flask import Flask, request, render_template
 
 webapp = Flask(__name__)
-
+numTechnologies = 0
 
 @webapp.get("/")
 def home():
@@ -16,8 +17,14 @@ def mycv():
     return render_template("cv.html", title="My CV")
 
 @webapp.get("/technologies")
-def technologies():
-    return render_template("technologies.html", title="Computing technologies")
+def defaultTechnology():
+    return technologies(1)
+
+@webapp.get("/technologies/<index>")
+def technologies(index):
+    if (int(index) > numTechnologies): index = numTechnologies
+    s = "technologies{id}.html"
+    return render_template(s.format(id=index), title="Computing technologies")
 
 @webapp.get("/interests")
 def interests():
@@ -25,4 +32,8 @@ def interests():
 
 
 if __name__ == "__main__":
-    webapp.run()
+    files = os.listdir("./templates")
+    for file in files:
+        if file.startswith('technologies'):
+            numTechnologies += 1
+    webapp.run(debug=True)
