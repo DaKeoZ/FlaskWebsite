@@ -1,0 +1,37 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #5c9dd7;
+    color: white;
+}
+
+header .logo {
+    margin: 2% 2% 0 -2%;
+}
+
+header .logo img {
+    width: 125px;
+    border-radius: 50%;
+}
+
+header .title h1 {
+    font-family: sans-serif;
+    font-size: 75px;
+    margin: 2% 0 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+header .title p {
+    font-family: sans-serif;
+    margin: 0 0 20px 0;
+}
