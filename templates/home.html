@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block body %}
+    <h2 id="home-info">
+        Here you can find every link redirecting to the different parts of my website.
+    </h2>
+
+    <ul id="summary">
+        <li><a href="/about">About me</a></li>
+        <li><a href="/cv">My CV</a></li>
+        <li><a href="/technologies">My favourite computing technologies</a></li>
+        <li><a href="/interests">My personal interests</a></li>
+    </ul>
+
+{% endblock %}
