@@ -90,16 +90,20 @@ footer {
     display: inline;
 }
 
-#techs {
+#techs, #artists {
     display: flex;
     text-align: center;
     justify-content: center;
 }
 
-#java, #j2ee, #html, #css {
+#java, #j2ee, #html, #css, #garrix, #guetta, #chnsmkrs {
     width: 300px;
 }
 
-#me {
+#me, #interests {
     font-size: 21px;
+}
+
+#garrix, #guetta, #chnsmkrs {
+    margin-left: 2%;
 }
