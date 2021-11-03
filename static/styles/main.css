@@ -48,7 +48,7 @@ header #title p {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     background: #5c9dd7;
     z-index: 50;
     text-align: center;
@@ -58,7 +58,7 @@ footer {
     width: 100%;
 }
 
-#home-info, #about-info, #tech-info-1, #tech-info-2 {
+.center {
     text-align: center;
 }
 
@@ -81,3 +81,22 @@ footer {
     padding: 0.5em 0;
     list-style-type: none;
 }
+
+/*.next-previous {
+    position: relative;
+}*/
+
+.inline {
+    display: inline;
+}
+
+#techs {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#java, #j2ee, #html, #css {
+    width: 300px;
+}
+
